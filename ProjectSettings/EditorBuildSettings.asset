@@ -8,4 +8,10 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/MainMenu.unity
     guid: 2cda990e2423bbf4892e6590ba056729
+  - enabled: 1
+    path: Assets/Scenes/CupsScene.unity
+    guid: 3218d763db4906e409bae3666db70e2d
+  - enabled: 1
+    path: Assets/Scenes/CardsScene.unity
+    guid: 1f4618d4c72b6544ba06b239e40debac
   m_configObjects: {}
