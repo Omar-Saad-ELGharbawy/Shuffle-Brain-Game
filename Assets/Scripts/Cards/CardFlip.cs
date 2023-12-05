@@ -4,69 +4,42 @@ using UnityEngine;
 
 public class CardFlip : MonoBehaviour
 {
+    Animator cardAnimator;
+    SpriteRenderer cardRenderer;
 
-    public float x,y,z;
-    public GameObject cardBack;
-    public GameObject cardFront;
+    [SerializeField] Sprite cardFront;
+    [SerializeField] Sprite cardBack;
 
-    public bool cardBackIsActive;
-    public int timer;
+    bool isFlipped = false;
+    public bool isCardFlipping = false;
 
-    // Start is called before the first frame update
     void Start()
     {
-        cardBack.SetActive(false);
-        cardFront.SetActive(true);
-        cardBackIsActive = false;
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        // if (Input.GetMouseButtonDown(0))
-        // {
-        //     StartCoroutine (CalculateFlip());
-        // }
+        cardAnimator = GetComponent<Animator>();
+        cardRenderer = GetComponent<SpriteRenderer>();
     }
 
     private void OnMouseDown()
     {
-        StartCoroutine (CalculateFlip());
+        FlipCard();
     }
 
-
-    IEnumerator CalculateFlip()
+    void FlipCard()
     {
-        for(int i=0;i<180;i++)
-        {
-            yield return new WaitForSeconds(0.01f);
-            transform.Rotate(new Vector3(x,y,z) );
-            timer ++;
-            
-            if(timer == 90  || timer == -90)
-            {
-                Flip();
-            }
-        }
-        timer = 0;
+        if (isCardFlipping) return;
+        isFlipped = !isFlipped;
+        cardAnimator.SetBool("Flip", isFlipped);
     }
 
-
-    public void Flip()
+    void ChangeSprite()
     {
-        if(cardBackIsActive)
+        if (isFlipped)
         {
-            cardBack.SetActive(false);
-            cardFront.SetActive(true);
-            cardBackIsActive = false;
+            cardRenderer.sprite = cardFront;
         }
         else
         {
-            cardBack.SetActive(true);
-            cardFront.SetActive(false);
-            cardBackIsActive = true;
+            cardRenderer.sprite = cardBack;
         }
     }
-
-
 }
