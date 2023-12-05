@@ -7,13 +7,11 @@ public class EnterGame : MonoBehaviour
 {
     public void EnterCupsGame()
     {
-        // SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
-        SceneManager.LoadScene("CupsScene");
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
     }
 
     public void EnterCardsGame()
     {
-        // SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 2);
-        SceneManager.LoadScene("CardsScene");
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 2);
     }
 }

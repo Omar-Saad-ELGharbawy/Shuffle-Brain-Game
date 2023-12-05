@@ -1078,6 +1078,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1041745068}
   - component: {fileID: 1041745067}
+  - component: {fileID: 1041745069}
   m_Layer: 0
   m_Name: Game Manager
   m_TagString: Untagged
@@ -1112,6 +1113,22 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1041745069
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1041745066}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0ccf13f2e040999429e4ccf3cfc31ade, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ShuffleObjects:
+  - {fileID: 7696861554904736660}
+  - {fileID: 2120110020}
+  - {fileID: 1200131501}
 --- !u!1001 &1051194674
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1476,6 +1493,11 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 1509959394874733735, guid: ce9e01181b84fdd4798d371cb3b963d7, type: 3}
   m_PrefabInstance: {fileID: 1200131499}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1200131501 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5423177708336941933, guid: ce9e01181b84fdd4798d371cb3b963d7, type: 3}
+  m_PrefabInstance: {fileID: 1200131499}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1443022048
 GameObject:
   m_ObjectHideFlags: 0
@@ -1728,6 +1750,14 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 1509959394874733735, guid: 17167fb5ad0f06d42be701ad8dee3ba1, type: 3}
   m_PrefabInstance: {fileID: 2120110018}
   m_PrefabAsset: {fileID: 0}
+<<<<<<< HEAD
+--- !u!1 &2120110020 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5423177708336941933, guid: ce9e01181b84fdd4798d371cb3b963d7, type: 3}
+  m_PrefabInstance: {fileID: 2120110018}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &7696861554904736659
+=======
   m_GameObject: {fileID: 97738587}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 1, z: 0, w: 0}
@@ -1790,6 +1820,7 @@ SpriteRenderer:
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!1001 &3403396221041994819
+>>>>>>> parent of 1509e02 (Revert "Cards Updates")
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
@@ -1865,7 +1896,16 @@ PrefabInstance:
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
+<<<<<<< HEAD
+  m_SourcePrefab: {fileID: 100100000, guid: ce9e01181b84fdd4798d371cb3b963d7, type: 3}
+--- !u!1 &7696861554904736660 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5423177708336941933, guid: ce9e01181b84fdd4798d371cb3b963d7, type: 3}
+  m_PrefabInstance: {fileID: 7696861554904736659}
+  m_PrefabAsset: {fileID: 0}
+=======
   m_SourcePrefab: {fileID: 100100000, guid: 4c5479041feab624fa5fdfcd9775596a, type: 3}
+>>>>>>> parent of 1509e02 (Revert "Cards Updates")
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
