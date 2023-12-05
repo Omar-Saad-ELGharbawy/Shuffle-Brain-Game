@@ -16,6 +16,11 @@ public class PauseGame : MonoBehaviour
         Time.timeScale = 1;
     }
 
+    public void Retry()
+    {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+    }
+
     public void MainMenu()
     {
         Time.timeScale = 1;
