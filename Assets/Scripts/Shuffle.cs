@@ -1,9 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
-using Unity.VisualScripting;
 using UnityEngine;
-using static Unity.Burst.Intrinsics.X86.Avx;
 
 public class Shuffle : MonoBehaviour
 {
@@ -17,41 +15,61 @@ public class Shuffle : MonoBehaviour
     public float moveSpeed = 0.5f;
 
     public GameObject ball;
-    [SerializeField] private List<GameObject> shuffleObjects = new List<GameObject>();
+    private List<GameObject> shuffleObjects = new List<GameObject>();
 
-    private void Awake()
-    {
-        GetShufflingObjects();
-    }
+
     void Start()
     {
+        GetShufflingObjects();
+
+        if (shuffleObjects.Contains(GameObject.Find("Card")))
+        {
+            Invoke(nameof(FlipAllCards), 1f);
+            Invoke(nameof(FlipAllCards), 4f);
+        }
+
+        Invoke(nameof(ShuffleObjects), 6f);
     }
 
-    void Update()
+    void ShuffleObjects()
     {
-        if (Input.GetKeyDown(KeyCode.Space))
+        StartCoroutine(ShuffleList());
+    }
+
+    /// <summary>
+    /// Flip all the cards at the beginning of the scene
+    /// </summary>
+    /// <param name="cards"></param>
+    void FlipAllCards()
+    {
+        foreach (var card in shuffleObjects)
         {
-            StartCoroutine(ShuffleList());
+            CardFlip flipScript = card.GetComponent<CardFlip>();
+            flipScript.FlipCard();
         }
     }
 
+    /// <summary>
+    /// Get all the shuffling items placed in the scene with the tag [Shuffle]
+    /// </summary>
     void GetShufflingObjects()
     {
         // Assuming your cups have a specific tag, adjust this based on your setup
-        GameObject[] shuffleObjects = GameObject.FindGameObjectsWithTag("Shuffle");
+        GameObject[] shufflesList = GameObject.FindGameObjectsWithTag("Shuffle");
 
-        foreach (GameObject shuffle in shuffleObjects)
+        foreach (GameObject shuffle in shufflesList)
         {
-            this.shuffleObjects.Add(shuffle);
+            shuffleObjects.Add(shuffle);
             transformList.Add((int)shuffle.transform.position.x);
         }
     }
 
-    // <summary>
-    // Shuffle the elememnts in a given list
-    // </summary>
+    /// <summary>
+    /// Shuffle the elements in a given list and change their position
+    /// </summary>
     IEnumerator ShuffleList()
     {
+
         for (int shufflingNumber = 0; shufflingNumber < shuffleCount; shufflingNumber++)
         {
             shuffledList = transformList.OrderBy(item => Random.value).ToList();
@@ -67,10 +85,9 @@ public class Shuffle : MonoBehaviour
                 }
                 elapsedTime += Time.deltaTime;
                 yield return null;
+
             }
             transformList = shuffledList;
         }
     }
-
-
 }

@@ -1951,7 +1951,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   moveSpeed: 0.5
   ball: {fileID: 0}
-  shuffleObjects: []
 --- !u!1001 &1446735302
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2290,6 +2289,7 @@ PrefabInstance:
     m_RemovedGameObjects:
     - {fileID: 8449559961898668764, guid: 4c5479041feab624fa5fdfcd9775596a, type: 3}
     - {fileID: 8710722242162507940, guid: 4c5479041feab624fa5fdfcd9775596a, type: 3}
+    - {fileID: 8145049786927177276, guid: ce9e01181b84fdd4798d371cb3b963d7, type: 3}
     m_AddedGameObjects: []
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 3757393647286057560, guid: ce9e01181b84fdd4798d371cb3b963d7, type: 3}
@@ -2406,6 +2406,7 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects:
     - {fileID: 8710722242162507940, guid: 4c5479041feab624fa5fdfcd9775596a, type: 3}
+    - {fileID: 8145049786927177276, guid: ce9e01181b84fdd4798d371cb3b963d7, type: 3}
     m_AddedGameObjects: []
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 3757393647286057560, guid: ce9e01181b84fdd4798d371cb3b963d7, type: 3}
@@ -2483,7 +2484,8 @@ PrefabInstance:
       value: Shuffle
       objectReference: {fileID: 0}
     m_RemovedComponents: []
-    m_RemovedGameObjects: []
+    m_RemovedGameObjects:
+    - {fileID: 8145049786927177276, guid: ce9e01181b84fdd4798d371cb3b963d7, type: 3}
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ce9e01181b84fdd4798d371cb3b963d7, type: 3}

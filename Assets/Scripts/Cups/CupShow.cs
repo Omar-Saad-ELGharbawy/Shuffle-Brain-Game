@@ -1,4 +1,5 @@
 using System.Collections;
+using Unity.Collections.LowLevel.Unsafe;
 using UnityEngine;
 
 public class CupShow : MonoBehaviour
@@ -36,9 +37,7 @@ public class CupShow : MonoBehaviour
         {
             StartCoroutine(MoveAndRotate());
         }
-
     }
-
 
     IEnumerator MoveAndRotate()
     {
