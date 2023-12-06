@@ -51,5 +51,6 @@
         "temp/": true,
         "Temp/": true
     },
-    "dotnet.defaultSolution": "Shuffle-Brain-Game.sln"
+    "dotnet.defaultSolution": "Shuffle-Brain-Game.sln",
+    "FSharp.suggestGitignore": false
 }

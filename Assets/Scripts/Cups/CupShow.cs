@@ -15,8 +15,8 @@ public class CupShow : MonoBehaviour
     void Start()
     {
         // Store the cup's original position and rotation
-        originalPosition = transform.position;
-        originalRotation = transform.rotation;
+        // originalPosition = transform.position;
+        // originalRotation = transform.rotation;
     }
 
     // Update is called once per frame
@@ -32,7 +32,7 @@ public class CupShow : MonoBehaviour
         ballPosition.x = transform.position.x;
         ball.position = ballPosition;
 
-        if (Input.GetMouseButtonDown(0)) 
+        if (Input.GetMouseButtonDown(0))
         {
             StartCoroutine(MoveAndRotate());
         }
@@ -42,6 +42,7 @@ public class CupShow : MonoBehaviour
 
     IEnumerator MoveAndRotate()
     {
+        originalPosition = transform.position;
         //  ####################### Move the Cup up ######################### /
         Vector3 targetPosition = originalPosition + Vector3.up * 2.0f; // Change the '2.0f' as per your desired movement distance
         float elapsedTime = 0f;
@@ -57,13 +58,13 @@ public class CupShow : MonoBehaviour
         yield return new WaitForSeconds(1.0f);
 
         //  ####################### Rotate ######################### /
-        
+
         // Get the initial rotation angle around the forward axis
         float initialRotationAngle = transform.rotation.eulerAngles.z;
-        
-        float rotationSpeed = 100.0f; 
-        float angleToRotate = 360.0f; 
-        float rotationTime = angleToRotate / rotationSpeed; 
+
+        float rotationSpeed = 100.0f;
+        float angleToRotate = 360.0f;
+        float rotationTime = angleToRotate / rotationSpeed;
         Debug.Log("Rotation Time for 360-degree rotation: " + rotationTime + " seconds");
 
         elapsedTime = 0f;
