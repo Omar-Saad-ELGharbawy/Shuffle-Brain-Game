@@ -1,19 +1,16 @@
-using System.Collections;
-using System.Collections.Generic;
+using System.Data;
 using UnityEngine;
 
 public class CardFlip : MonoBehaviour
 {
     Animator cardAnimator;
     SpriteRenderer cardRenderer;
-
     [SerializeField] Sprite cardFront;
     [SerializeField] Sprite cardBack;
-
-    public LevelManager level;
-
+    // public LevelManager level;
     bool isFlipped = false;
     public bool isCardFlipping = false;
+    public GameObject gameOverPanel;
 
     void Start()
     {
@@ -26,15 +23,27 @@ public class CardFlip : MonoBehaviour
     /// </summary>
     private void OnMouseDown()
     {
+        if (Shuffle.isShuflling) return;
+        if (isFlipped) return;
         // know the pressed by card image
-        if(gameObject.name == "Card (1)"){
-            level.LevelUp();
-
+        if (gameObject.name == "Card (1)")
+        {
+            LevelManager.levelNumber++;
+            // LevelManager.LevelUp();
+        }
+        else
+        {
+            Invoke(nameof(GameOver), 3f);
         }
 
-        if (isFlipped) return;
         FlipCard();
         Invoke(nameof(FlipCard), 2f);
+    }
+
+    void GameOver(){
+        LevelManager.levelNumber=1;
+        gameOverPanel.SetActive(true);
+        Time.timeScale= 0;
     }
 
     /// <summary>

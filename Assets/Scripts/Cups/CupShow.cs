@@ -11,7 +11,6 @@ public class CupShow : MonoBehaviour
     public float rotationDuration = 3f;
     public float rotationSpeed = 100f;
     private Vector3 originalPosition;
-    private Quaternion originalRotation;
 
     void Start()
     {
@@ -33,19 +32,26 @@ public class CupShow : MonoBehaviour
         ballPosition.x = transform.position.x;
         ball.position = ballPosition;
 
-        if (Input.GetMouseButtonDown(0))
-        {
-            StartCoroutine(MoveAndRotate());
-        }
+        // if (Input.GetMouseButtonDown(0))
+        // {
+        //     StartCoroutine(MoveAndRotate());
+        // }
+    }
+
+    public void ShowBall(){
+        StartCoroutine(MoveAndRotate());
     }
 
     IEnumerator MoveAndRotate()
     {
+
+        // yield return new WaitForSeconds(1f);
+
         originalPosition = transform.position;
         //  ####################### Move the Cup up ######################### /
         Vector3 targetPosition = originalPosition + Vector3.up * 2.0f; // Change the '2.0f' as per your desired movement distance
         float elapsedTime = 0f;
-        float moveDuration = 1.0f; // Duration for movement upward
+        float moveDuration = 0.8f; // Duration for movement upward
 
         while (elapsedTime < moveDuration)
         {
@@ -54,14 +60,14 @@ public class CupShow : MonoBehaviour
             yield return null;
         }
         // Pause for 1 second
-        yield return new WaitForSeconds(1.0f);
+        yield return new WaitForSeconds(0.3f);
 
         //  ####################### Rotate ######################### /
 
         // Get the initial rotation angle around the forward axis
         float initialRotationAngle = transform.rotation.eulerAngles.z;
 
-        float rotationSpeed = 100.0f;
+        float rotationSpeed = 200.0f;
         float angleToRotate = 360.0f;
         float rotationTime = angleToRotate / rotationSpeed;
         Debug.Log("Rotation Time for 360-degree rotation: " + rotationTime + " seconds");
@@ -76,10 +82,7 @@ public class CupShow : MonoBehaviour
             yield return null;
         }
         // Pause for 1 second
-        yield return new WaitForSeconds(1.0f);
-
-        //  ####################### Return to the original rotation ######################### /
-        // transform.rotation = originalRotation;
+        yield return new WaitForSeconds(0.3f);
 
         //  ####################### Move the Cup Down ######################### /
         elapsedTime = 0f;
@@ -90,8 +93,6 @@ public class CupShow : MonoBehaviour
             yield return null;
         }
 
-        // Ensure the object is back at the original position and rotation
-        // transform.position = originalPosition;
     }
 
 
