@@ -10,6 +10,8 @@ public class CardFlip : MonoBehaviour
     [SerializeField] Sprite cardFront;
     [SerializeField] Sprite cardBack;
 
+    public LevelManager level;
+
     bool isFlipped = false;
     public bool isCardFlipping = false;
 
@@ -24,9 +26,15 @@ public class CardFlip : MonoBehaviour
     /// </summary>
     private void OnMouseDown()
     {
+        // know the pressed by card image
+        if(gameObject.name == "Card (1)"){
+            level.LevelUp();
+
+        }
+
         if (isFlipped) return;
-        Invoke(nameof(FlipCard), 2f);
         FlipCard();
+        Invoke(nameof(FlipCard), 2f);
     }
 
     /// <summary>

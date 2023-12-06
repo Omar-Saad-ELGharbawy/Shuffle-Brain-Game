@@ -7,10 +7,8 @@ public class Shuffle : MonoBehaviour
 {
     List<int> transformList = new List<int>();
     List<int> shuffledList = new List<int>();
-
-    public static int levelNum = 0;
     public static int shuffleCount = 5;
-    public static float suffleDuration = 1.0f;
+    public float shuffleDuration = 1.0f;
 
     public float moveSpeed = 0.5f;
 
@@ -31,7 +29,7 @@ public class Shuffle : MonoBehaviour
         Invoke(nameof(ShuffleObjects), 6f);
     }
 
-    void ShuffleObjects()
+    public void ShuffleObjects()
     {
         StartCoroutine(ShuffleList());
     }
@@ -75,13 +73,13 @@ public class Shuffle : MonoBehaviour
             shuffledList = transformList.OrderBy(item => Random.value).ToList();
 
             float elapsedTime = 0f;
-            while (elapsedTime < suffleDuration)
+            while (elapsedTime < shuffleDuration)
             {
                 for (int i = 0; i < 3; i++)
                 {
                     Vector3 currentPosition = new Vector3(transformList[i], 0f, 0f);
                     Vector3 targetPosition = new Vector3(shuffledList[i], 0f, 0f);
-                    shuffleObjects[i].transform.position = Vector3.Lerp(currentPosition, targetPosition, elapsedTime / suffleDuration);
+                    shuffleObjects[i].transform.position = Vector3.Lerp(currentPosition, targetPosition, elapsedTime / shuffleDuration);
                 }
                 elapsedTime += Time.deltaTime;
                 yield return null;
