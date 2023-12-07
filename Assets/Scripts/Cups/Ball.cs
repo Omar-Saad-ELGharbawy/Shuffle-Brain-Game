@@ -8,7 +8,8 @@ public class Ball : MonoBehaviour
     public Transform MyCup;
 
 
-    void Update()
+
+    void LateUpdate()
     {
         // Update the ball's position only on the horizontal axis
         Vector3 myCupPosition = transform.position;
