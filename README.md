@@ -66,7 +66,7 @@ The "Game Over" panel provides a crucial interface element in the game. When a p
 **(Desktop - Windows)**
 
 ### Downloading the Game
-1. **Download Zip File:** Click [here](link_to_your_game_zip) to download the zip file containing the game executable and necessary files.
+1. **Download Zip File:** Click [here](https://drive.google.com/file/d/10fg3pevETtsnAKAC5BPMNDQYy2Cml4AV/view?usp=sharing) to download the zip file containing the game executable and necessary files.
 
 ### Installing the Game
 2. **Extract Zip File:** Once downloaded, locate the downloaded zip file (e.g., `Shuffle Brain Game.zip`) in your downloads folder or the specified download location.
