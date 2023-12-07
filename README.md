@@ -20,20 +20,18 @@ Immerse yourself in the exhilarating world of Shuffle Brain Game, a brain-twisti
 - **Challenging Levels:** With each level, the game becomes more challenging. Expect increased shuffle speed and count, putting your skills to the test.
 - **Progressive Difficulty:** The difficulty ramps up gradually as you advance through the levels.
 - **Two Engaging Modes:** Enjoy different challenges in Cup Mode and Cards Shuffling Mode.
-- 
+  
 ## Game Modes
 ### Cup Mode
 In this mode, the ball is hidden under one of the cups. Your objective is to follow the cup that hides the ball as the cups shuffle. Test your focus and memory skills to choose the correct cup with the ball when the shuffling stops.
 
-![Cup 1](https://github.com/Sherif-2001/Shuffle-Brain-Game/assets/84602951/de14b96c-5fa9-4278-8ad2-984dd1fe7218)
-
 ![Cup2](https://github.com/Sherif-2001/Shuffle-Brain-Game/assets/84602951/3a31fc94-54a1-46db-87d1-2b82392d4792)
+![Cup 1](https://github.com/Sherif-2001/Shuffle-Brain-Game/assets/84602951/de14b96c-5fa9-4278-8ad2-984dd1fe7218)
 
 ### Cards Shuffling Mode
 This mode features a deck of cards. The cards will flip, and your goal is to track the Queen card as the deck shuffles. Sharpen your observation skills to identify the Queen card's position once the shuffling ends.
 
 ![Card 2](https://github.com/Sherif-2001/Shuffle-Brain-Game/assets/84602951/9bd6b086-7713-41b2-b454-8ce326a9e27e)
-
 ![Card 1](https://github.com/Sherif-2001/Shuffle-Brain-Game/assets/84602951/15201d7b-ee00-4893-8694-e6270a029416)
 
 ### Game Over Panel
