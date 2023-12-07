@@ -4,37 +4,34 @@ using UnityEngine;
 
 public class CupUp : MonoBehaviour
 {
-    
-    private Vector3 originalPosition;
-    public float moveSpeed = 0.5f;
-    public GameObject gameOverPanel;
 
-    bool isUp= false;
+    private Vector3 originalPosition;
+
+    bool isUp = false;
 
     /// <summary>
-    /// Check if the player clicked on a card
+    /// Check if the player clicked on the cup with the ball
     /// </summary>
     private void OnMouseDown()
     {
-        if (Shuffle.isShuflling) return;
+        if (!Shuffle.canClickItem) return;
         if (isUp) return;
-        if (gameObject.name == "Red Cup"){
-            LevelManager.levelNumber++;
-        }
-        else
+
+        Shuffle.canClickItem = false;
+
+        bool isGameOver = gameObject.name != "Red Cup";
+
+        StartCoroutine(GameObject.Find("Game Manager").GetComponent<Shuffle>().ShowItems(isGameOver));
+        if (!isGameOver)
         {
-            Invoke(nameof(GameOver), 3f);
+            StartCoroutine(GameObject.Find("Game Manager").GetComponent<Shuffle>().ShowItems());
         }
 
         originalPosition = transform.position;
-        StartCoroutine (MoveUpDown());
+        StartCoroutine(MoveUpDown());
     }
 
-    void GameOver(){
-        LevelManager.levelNumber=1;
-        gameOverPanel.SetActive(true);
-        Time.timeScale= 0;
-    }
+
 
     IEnumerator MoveUpDown()
     {
@@ -52,6 +49,7 @@ public class CupUp : MonoBehaviour
         }
         // Pause for 1 second
         yield return new WaitForSeconds(1.0f);
+
         //  ####################### Move the Cup Down ######################### /
         elapsedTime = 0f;
         while (elapsedTime < moveDuration)

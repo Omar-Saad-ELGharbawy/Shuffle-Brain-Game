@@ -699,7 +699,7 @@ PrefabInstance:
     - target: {fileID: 5517636311137563019, guid: b02551864ec31f7419f8e8ad7af88b55, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 1924587954}
+      objectReference: {fileID: 0}
     - target: {fileID: 5517636311137563019, guid: b02551864ec31f7419f8e8ad7af88b55, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Target
       value: 
@@ -1516,6 +1516,7 @@ GameObject:
   - component: {fileID: 1041745068}
   - component: {fileID: 1041745067}
   - component: {fileID: 1041745069}
+  - component: {fileID: 1041745070}
   m_Layer: 0
   m_Name: Game Manager
   m_TagString: Untagged
@@ -1535,7 +1536,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d69b9120186378c41bc927eab8f53c01, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  shuffle: {fileID: 1924587954}
 --- !u!4 &1041745068
 Transform:
   m_ObjectHideFlags: 0
@@ -1563,8 +1563,22 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 097a18c8d2fba024587961ecf973e472, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  level: {fileID: 335836274}
-  gameDifficulty: {fileID: 1924587954}
+  levelText: {fileID: 335836274}
+--- !u!114 &1041745070
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1041745066}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0ccf13f2e040999429e4ccf3cfc31ade, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  shuffleCount: 2
+  shuffleDuration: 1
+  gameOverPanel: {fileID: 1417193528}
 --- !u!1001 &1051194674
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2168,7 +2182,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1924587953}
-  - component: {fileID: 1924587954}
   m_Layer: 0
   m_Name: Cups
   m_TagString: Untagged
@@ -2194,21 +2207,6 @@ Transform:
   - {fileID: 854965343}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1924587954
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1924587952}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0ccf13f2e040999429e4ccf3cfc31ade, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  shuffleCount: 2
-  shuffleDuration: 1
-  cupShow: {fileID: 5680150169631889045}
 --- !u!1 &1959912704
 GameObject:
   m_ObjectHideFlags: 0

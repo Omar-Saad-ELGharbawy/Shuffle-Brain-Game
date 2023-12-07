@@ -1,5 +1,4 @@
 using System.Collections;
-using Unity.Collections.LowLevel.Unsafe;
 using UnityEngine;
 
 public class CupShow : MonoBehaviour
@@ -19,26 +18,16 @@ public class CupShow : MonoBehaviour
         // originalRotation = transform.rotation;
     }
 
-    // Update is called once per frame
     void Update()
     {
-        // Get user input for horizontal movement (you can modify this based on your control scheme)
-        float horizontalInput = Input.GetAxis("Horizontal");
-        // Move the cup left/right based on input
-        transform.Translate(Vector3.right * horizontalInput * moveSpeed * Time.deltaTime);
-
         // Update the ball's position only on the horizontal axis
         Vector3 ballPosition = ball.position;
         ballPosition.x = transform.position.x;
         ball.position = ballPosition;
-
-        // if (Input.GetMouseButtonDown(0))
-        // {
-        //     StartCoroutine(MoveAndRotate());
-        // }
     }
 
-    public void ShowBall(){
+    public void ShowBall()
+    {
         StartCoroutine(MoveAndRotate());
     }
 
@@ -64,7 +53,7 @@ public class CupShow : MonoBehaviour
 
         //  ####################### Rotate ######################### /
 
-        // Get the initial rotation angle around the forward axis
+        //Get the initial rotation angle around the forward axis
         float initialRotationAngle = transform.rotation.eulerAngles.z;
 
         float rotationSpeed = 200.0f;
@@ -94,7 +83,4 @@ public class CupShow : MonoBehaviour
         }
 
     }
-
-
-
 }
