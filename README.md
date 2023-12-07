@@ -81,7 +81,7 @@ The "Game Over" panel provides a crucial interface element in the game. When a p
 **(PCs, Mobiles, iPads - Touch Supported)**
 
 ### Online Play
-- **Play Online:** You can also play the game online using PCs, mobile devices, or iPads with touch support. Access the online version [here]([https://simmer.io/@Omar_Saad/shuffle-cups-and-cards]).
+- **Play Online:** You can also play the game online using PCs, mobile devices, or iPads with touch support. Access the online version [here](https://simmer.io/@Omar_Saad/shuffle-cups-and-cards).
 
 ## Team Members
 - Developed by :
