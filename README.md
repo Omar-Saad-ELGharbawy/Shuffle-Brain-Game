@@ -62,21 +62,23 @@ The "Game Over" panel provides a crucial interface element in the game. When a p
 ### Platforms
 - **Desktop:** Windows
 
-## Installation (Desktop - Windows)
+## Installation
+**(Desktop - Windows)**
 
 ### Downloading the Game
 1. **Download Zip File:** Click [here](link_to_your_game_zip) to download the zip file containing the game executable and necessary files.
 
 ### Installing the Game
-2. **Extract Zip File:** Once downloaded, locate the downloaded zip file (e.g., `Shuffling_Game.zip`) in your downloads folder or the specified download location.
+2. **Extract Zip File:** Once downloaded, locate the downloaded zip file (e.g., `Shuffle Brain Game.zip`) in your downloads folder or the specified download location.
 
 3. **Extract Files:** Right-click the zip file and select "Extract All" or use an archive utility like WinRAR or 7-Zip to extract its contents.
 
-4. **Run the Game:** Navigate to the extracted folder and find the game executable (e.g., `Shuffling_Game.exe`).
+4. **Run the Game:** Navigate to the extracted folder and find the game executable (e.g., `Shuffle Brain Game.exe`).
 
 5. **Launch the Game:** Double-click the game's .exe file to launch and start playing the Shuffling Game on your desktop.
 
-## Play Online (PCs, Mobiles, iPads - Touch Supported)
+## Play Online 
+**(PCs, Mobiles, iPads - Touch Supported)**
 
 ### Online Play
 - **Play Online:** You can also play the game online using PCs, mobile devices, or iPads with touch support. Access the online version [here]([link_to_your_online_game](https://simmer.io/@Omar_Saad/shuffle-cups-and-cards)).
