@@ -28,6 +28,10 @@ public class CardFlip : MonoBehaviour
 
         Shuffle.canClickItem = false;
 
+        // GetComponent<AudioSource>().Play();
+
+        // GameObject.Find("Game Manager").GetComponent<AudioSource>().Play();
+
         // know the pressed by card image
         bool isGameOver = gameObject.name != "Card (1)";
 
@@ -49,6 +53,8 @@ public class CardFlip : MonoBehaviour
     {
         isFlipped = !isFlipped;
         cardAnimator.SetBool("Flip", isFlipped);
+        GameObject.Find("Game Manager").GetComponent<AudioSource>().Play();
+
     }
 
 

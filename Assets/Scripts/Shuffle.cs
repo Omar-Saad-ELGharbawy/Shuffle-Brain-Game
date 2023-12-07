@@ -53,6 +53,7 @@ public class Shuffle : MonoBehaviour
         // Flip all the Cards in the scene
         if (shuffleItems.Contains(GameObject.Find("Card")))
         {
+            // Invoke("playCardsSound", 0.9f); 
             yield return new WaitForSeconds(0.5f);
             foreach (var item in shuffleItems) item.GetComponent<CardFlip>().FlipCard();
 
@@ -60,7 +61,6 @@ public class Shuffle : MonoBehaviour
             foreach (var item in shuffleItems) item.GetComponent<CardFlip>().FlipCard();
             yield return new WaitForSeconds(0.5f);
 
-            Invoke("playCardsSound", 0.9f); 
 
         }
         // Raise the cup that has the ball
@@ -86,10 +86,10 @@ public class Shuffle : MonoBehaviour
         }
     }
 
-    void playCardsSound()
-    {
-        GetComponent<AudioSource>().Play();
-    }
+    // void playCardsSound()
+    // {
+    //     GetComponent<AudioSource>().Play();
+    // }
 
 
 

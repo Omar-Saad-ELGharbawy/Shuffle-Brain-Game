@@ -61,6 +61,9 @@ public class Cups : MonoBehaviour
         yield return new WaitForSeconds(0.4f);
 
         //  ####################### Move the Cup Down ######################### /
+        // GameObject.Find("Game Manager").GetComponent<AudioSource>().Play();
+        Invoke("cupSound", 0.2f); 
+
         elapsedTime = 0f;
         while (elapsedTime < moveDuration)
         {
@@ -68,6 +71,7 @@ public class Cups : MonoBehaviour
             elapsedTime += Time.deltaTime;
             yield return null;
         }
+
     }
 
     public IEnumerator MoveAndRotate()
@@ -112,6 +116,10 @@ public class Cups : MonoBehaviour
         transform.rotation = startRotation;
 
         //  ####################### Move the Cup Down ######################### /
+        Invoke("cupSound", 0.1f); 
+        // GameObject.Find("Game Manager").GetComponent<AudioSource>().Play();
+
+
         elapsedTime = 0f;
         while (elapsedTime < moveDuration)
         {
@@ -119,6 +127,13 @@ public class Cups : MonoBehaviour
             elapsedTime += Time.deltaTime;
             yield return null;
         }
+
+    }
+
+    void cupSound()
+    {
+        GameObject.Find("Game Manager").GetComponent<AudioSource>().Play();
+
     }
 
 }
