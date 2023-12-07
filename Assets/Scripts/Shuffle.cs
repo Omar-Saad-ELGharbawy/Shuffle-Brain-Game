@@ -2,7 +2,6 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
-using UnityEngine.SceneManagement;
 
 public class Shuffle : MonoBehaviour
 {
@@ -67,9 +66,9 @@ public class Shuffle : MonoBehaviour
 
             if (!cupShowFlag)
             {
-                foreach (var item in shuffleItems) StartCoroutine(item.GetComponent<CupUp>().MoveUpDown());
+                foreach (var item in shuffleItems) StartCoroutine(item.GetComponent<Cups>().MoveUpDown());
             }
-            yield return new WaitForSeconds(2f);
+            yield return new WaitForSeconds(1.5f);
             cupShowFlag = false;
 
         }

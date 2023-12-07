@@ -1,11 +1,7 @@
-using System;
-using System.Collections;
-using System.Collections.Generic;
-using System.Linq;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class PauseGame : MonoBehaviour
+public class UserDialogue : MonoBehaviour
 {
 
     // Pause the current game

@@ -238,7 +238,7 @@ PrefabInstance:
     - target: {fileID: 5517636311137563019, guid: b02551864ec31f7419f8e8ad7af88b55, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 1041745067}
+      objectReference: {fileID: 0}
     - target: {fileID: 5517636311137563019, guid: b02551864ec31f7419f8e8ad7af88b55, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Target
       value: 
@@ -699,7 +699,7 @@ PrefabInstance:
     - target: {fileID: 5517636311137563019, guid: b02551864ec31f7419f8e8ad7af88b55, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1041745071}
     - target: {fileID: 5517636311137563019, guid: b02551864ec31f7419f8e8ad7af88b55, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Target
       value: 
@@ -718,7 +718,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5517636311137563019, guid: b02551864ec31f7419f8e8ad7af88b55, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
-      value: Shuffle, Assembly-CSharp
+      value: UserDialogue, Assembly-CSharp
       objectReference: {fileID: 0}
     - target: {fileID: 5517636311137563019, guid: b02551864ec31f7419f8e8ad7af88b55, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_TargetAssemblyTypeName
@@ -848,7 +848,7 @@ PrefabInstance:
     - target: {fileID: 5517636311137563019, guid: b02551864ec31f7419f8e8ad7af88b55, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 1041745067}
+      objectReference: {fileID: 1041745071}
     - target: {fileID: 5517636311137563019, guid: b02551864ec31f7419f8e8ad7af88b55, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Target
       value: 
@@ -867,7 +867,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5517636311137563019, guid: b02551864ec31f7419f8e8ad7af88b55, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
-      value: PauseGame, Assembly-CSharp
+      value: UserDialogue, Assembly-CSharp
       objectReference: {fileID: 0}
     - target: {fileID: 5517636311137563019, guid: b02551864ec31f7419f8e8ad7af88b55, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_TargetAssemblyTypeName
@@ -1269,7 +1269,7 @@ PrefabInstance:
       addedObject: {fileID: 854965344}
     - targetCorrespondingSourceObject: {fileID: 6012056718172371244, guid: df19fcde26b315046b22297772b781a7, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 854965345}
+      addedObject: {fileID: 854965347}
   m_SourcePrefab: {fileID: 100100000, guid: df19fcde26b315046b22297772b781a7, type: 3}
 --- !u!4 &854965343 stripped
 Transform:
@@ -1321,7 +1321,7 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 4.5, y: 6}
   m_EdgeRadius: 0
---- !u!114 &854965345
+--- !u!114 &854965347
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1330,11 +1330,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 8339746}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7da903cb2a2060d4ba1fc297614cb993, type: 3}
+  m_Script: {fileID: 11500000, guid: 589aa0ea5a9952a4d8b8efbcbddd040b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveSpeed: 0.5
-  gameOverPanel: {fileID: 1417193528}
 --- !u!1 &1006563631
 GameObject:
   m_ObjectHideFlags: 0
@@ -1514,9 +1512,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1041745068}
-  - component: {fileID: 1041745067}
   - component: {fileID: 1041745069}
   - component: {fileID: 1041745070}
+  - component: {fileID: 1041745071}
   m_Layer: 0
   m_Name: Game Manager
   m_TagString: Untagged
@@ -1524,18 +1522,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &1041745067
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1041745066}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d69b9120186378c41bc927eab8f53c01, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!4 &1041745068
 Transform:
   m_ObjectHideFlags: 0
@@ -1564,6 +1550,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   levelText: {fileID: 335836274}
+  levelNumber: 1
 --- !u!114 &1041745070
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1579,6 +1566,18 @@ MonoBehaviour:
   shuffleCount: 2
   shuffleDuration: 1
   gameOverPanel: {fileID: 1417193528}
+--- !u!114 &1041745071
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1041745066}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 777ebca75deb8a74b81dddacc7d44dcb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1051194674
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1602,7 +1601,7 @@ PrefabInstance:
     - target: {fileID: 5517636311137563019, guid: b02551864ec31f7419f8e8ad7af88b55, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 1041745067}
+      objectReference: {fileID: 0}
     - target: {fileID: 5517636311137563019, guid: b02551864ec31f7419f8e8ad7af88b55, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Target
       value: 
@@ -1807,8 +1806,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1041745067}
-        m_TargetAssemblyTypeName: PauseGame, Assembly-CSharp
+      - m_Target: {fileID: 1041745071}
+        m_TargetAssemblyTypeName: UserDialogue, Assembly-CSharp
         m_MethodName: Pause
         m_Mode: 1
         m_Arguments:
@@ -2102,7 +2101,7 @@ PrefabInstance:
       addedObject: {fileID: 1704085758}
     - targetCorrespondingSourceObject: {fileID: 6012056718172371244, guid: df19fcde26b315046b22297772b781a7, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 1704085759}
+      addedObject: {fileID: 1704085761}
   m_SourcePrefab: {fileID: 100100000, guid: df19fcde26b315046b22297772b781a7, type: 3}
 --- !u!4 &1648129694 stripped
 Transform:
@@ -2159,7 +2158,7 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 4.5, y: 6}
   m_EdgeRadius: 0
---- !u!114 &1704085759
+--- !u!114 &1704085761
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -2168,11 +2167,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 1704085757}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7da903cb2a2060d4ba1fc297614cb993, type: 3}
+  m_Script: {fileID: 11500000, guid: 589aa0ea5a9952a4d8b8efbcbddd040b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveSpeed: 0.5
-  gameOverPanel: {fileID: 1417193528}
 --- !u!1 &1924587952
 GameObject:
   m_ObjectHideFlags: 0
@@ -2217,6 +2214,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1959912706}
   - component: {fileID: 1959912705}
+  - component: {fileID: 1959912707}
   m_Layer: 0
   m_Name: Ball
   m_TagString: Untagged
@@ -2291,6 +2289,19 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1959912707
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1959912704}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c866c302d25dfa04c99a39045eb8ee42, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  MyCup: {fileID: 5680150169631889044}
 --- !u!224 &2003884003 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 6619834336280820798, guid: b02551864ec31f7419f8e8ad7af88b55, type: 3}
@@ -2473,11 +2484,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3583571487414027245, guid: df19fcde26b315046b22297772b781a7, type: 3}
       propertyPath: m_LocalRotation.x
-      value: -0
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3583571487414027245, guid: df19fcde26b315046b22297772b781a7, type: 3}
       propertyPath: m_LocalRotation.y
-      value: -0
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3583571487414027245, guid: df19fcde26b315046b22297772b781a7, type: 3}
       propertyPath: m_LocalRotation.z
@@ -2524,33 +2535,13 @@ PrefabInstance:
       addedObject: {fileID: 5680150169631889046}
     - targetCorrespondingSourceObject: {fileID: 6012056718172371244, guid: df19fcde26b315046b22297772b781a7, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 5680150169631889045}
-    - targetCorrespondingSourceObject: {fileID: 6012056718172371244, guid: df19fcde26b315046b22297772b781a7, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 5680150169631889047}
+      addedObject: {fileID: 5680150169631889049}
   m_SourcePrefab: {fileID: 100100000, guid: df19fcde26b315046b22297772b781a7, type: 3}
 --- !u!4 &5680150169631889044 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3583571487414027245, guid: df19fcde26b315046b22297772b781a7, type: 3}
   m_PrefabInstance: {fileID: 5680150169631889043}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &5680150169631889045
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2037719338}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 707aef74664d1eb4f984e2e065512537, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  ball: {fileID: 1959912706}
-  moveSpeed: 0.5
-  showDuration: 1.5
-  rotationDuration: 3
-  rotationSpeed: 100
 --- !u!61 &5680150169631889046
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -2596,7 +2587,7 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 4.5, y: 6}
   m_EdgeRadius: 0
---- !u!114 &5680150169631889047
+--- !u!114 &5680150169631889049
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -2605,11 +2596,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 2037719338}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7da903cb2a2060d4ba1fc297614cb993, type: 3}
+  m_Script: {fileID: 11500000, guid: 589aa0ea5a9952a4d8b8efbcbddd040b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveSpeed: 0.5
-  gameOverPanel: {fileID: 1417193528}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
