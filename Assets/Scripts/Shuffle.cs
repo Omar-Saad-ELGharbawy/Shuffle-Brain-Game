@@ -56,8 +56,12 @@ public class Shuffle : MonoBehaviour
             yield return new WaitForSeconds(0.5f);
             foreach (var item in shuffleItems) item.GetComponent<CardFlip>().FlipCard();
 
-            yield return new WaitForSeconds(2);
+            yield return new WaitForSeconds(1.5f);
             foreach (var item in shuffleItems) item.GetComponent<CardFlip>().FlipCard();
+            yield return new WaitForSeconds(0.5f);
+
+            Invoke("playCardsSound", 0.9f); 
+
         }
         // Raise the cup that has the ball
         else if (shuffleItems.Contains(GameObject.Find("Red Cup")))
@@ -70,7 +74,6 @@ public class Shuffle : MonoBehaviour
             }
             yield return new WaitForSeconds(1.5f);
             cupShowFlag = false;
-
         }
 
         if (isGameOver)
@@ -83,6 +86,11 @@ public class Shuffle : MonoBehaviour
         }
     }
 
+    void playCardsSound()
+    {
+        GetComponent<AudioSource>().Play();
+    }
+
 
 
 
@@ -92,7 +100,7 @@ public class Shuffle : MonoBehaviour
     /// </summary>
     IEnumerator ShuffleList()
     {
-        yield return new WaitForSeconds(1f);
+        yield return new WaitForSeconds(0.5f);
 
         // Start shuffling the items in the scene and change their positions
         for (int shufflingNumber = 0; shufflingNumber < shuffleCount; shufflingNumber++)

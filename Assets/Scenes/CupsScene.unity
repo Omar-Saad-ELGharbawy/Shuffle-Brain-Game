@@ -1808,7 +1808,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1041745071}
         m_TargetAssemblyTypeName: UserDialogue, Assembly-CSharp
-        m_MethodName: Pause
+        m_MethodName: MainMenu
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
