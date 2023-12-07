@@ -16,9 +16,11 @@ public class Shuffle : MonoBehaviour
 
     [SerializeField] GameObject gameOverPanel;
 
+    bool cupShowFlag;
 
     void Start()
     {
+        cupShowFlag = true;
         FindAllShuffleItems();
         StartCoroutine(ShowItems());
     }
@@ -62,10 +64,14 @@ public class Shuffle : MonoBehaviour
         else if (shuffleItems.Contains(GameObject.Find("Red Cup")))
         {
             yield return new WaitForSeconds(0.5f);
-            foreach (var item in shuffleItems)
+
+            if (!cupShowFlag)
             {
-                if (item.name == "Red Cup") item.GetComponent<CupShow>().ShowBall();
+                foreach (var item in shuffleItems) StartCoroutine(item.GetComponent<CupUp>().MoveUpDown());
             }
+            yield return new WaitForSeconds(2f);
+            cupShowFlag = false;
+
         }
 
         if (isGameOver)

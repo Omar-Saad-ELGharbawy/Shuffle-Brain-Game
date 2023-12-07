@@ -8,10 +8,10 @@ public class LevelManager : MonoBehaviour
     public TextMeshProUGUI levelText;
     Shuffle shuffleScript;
 
-    int levelNumber = 1;
+    public int levelNumber = 1;
 
     float originalDuration;
-    float minShuffleDuration = 0.25f;
+    float minShuffleDuration = 0.2f;
 
     void Start()
     {

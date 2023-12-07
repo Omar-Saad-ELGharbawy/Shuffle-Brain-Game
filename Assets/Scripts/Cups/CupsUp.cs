@@ -15,31 +15,34 @@ public class CupUp : MonoBehaviour
     private void OnMouseDown()
     {
         if (!Shuffle.canClickItem) return;
-        if (isUp) return;
+        // if (isUp) return;
 
         Shuffle.canClickItem = false;
 
+        // know the pressed by Cup with ball
         bool isGameOver = gameObject.name != "Red Cup";
 
         StartCoroutine(GameObject.Find("Game Manager").GetComponent<Shuffle>().ShowItems(isGameOver));
         if (!isGameOver)
         {
-            StartCoroutine(GameObject.Find("Game Manager").GetComponent<Shuffle>().ShowItems());
+            GameObject.Find("Game Manager").GetComponent<LevelManager>().IncreaseLevel();
         }
 
-        originalPosition = transform.position;
-        StartCoroutine(MoveUpDown());
+        // originalPosition = transform.position;
+        // StartCoroutine(MoveUpDown());
     }
+    
 
 
 
-    IEnumerator MoveUpDown()
+    public IEnumerator MoveUpDown()
     {
-        isUp = true;
+        originalPosition = transform.position;
+
         //  ####################### Move the Cup up ######################### /
         Vector3 targetPosition = originalPosition + Vector3.up * 2.0f; // Change the '2.0f' as per your desired movement distance
         float elapsedTime = 0f;
-        float moveDuration = 1.0f; // Duration for movement upward
+        float moveDuration =0.5f; // Duration for movement upward
 
         while (elapsedTime < moveDuration)
         {
@@ -48,7 +51,7 @@ public class CupUp : MonoBehaviour
             yield return null;
         }
         // Pause for 1 second
-        yield return new WaitForSeconds(1.0f);
+        yield return new WaitForSeconds(0.5f);
 
         //  ####################### Move the Cup Down ######################### /
         elapsedTime = 0f;
@@ -58,7 +61,6 @@ public class CupUp : MonoBehaviour
             elapsedTime += Time.deltaTime;
             yield return null;
         }
-        isUp = false;
     }
 
 }
